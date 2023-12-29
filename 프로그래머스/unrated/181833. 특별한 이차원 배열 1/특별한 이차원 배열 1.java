@@ -10,8 +10,6 @@ class Solution {
                 {
                     answer[i][j]=1;
                 }
-                else
-                    answer[i][j]=0;
             }
         }
         return answer;
