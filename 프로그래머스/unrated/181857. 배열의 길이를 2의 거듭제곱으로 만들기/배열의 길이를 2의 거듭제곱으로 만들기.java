@@ -20,13 +20,12 @@ class Solution {
                 count--;
             }
         }
-        for(int i=0;i<arr.length;i++)
+        for(int i=0;i<sq;i++)
         {
-            answer.add(arr[i]);
-        }
-        for(int i=arr.length;i<sq;i++)
-        {
-            answer.add(0);
+            if(i<arr.length)
+                answer.add(arr[i]);
+            else
+                answer.add(0);
         }
         return answer;
     }
