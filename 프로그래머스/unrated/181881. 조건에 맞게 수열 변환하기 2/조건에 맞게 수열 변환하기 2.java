@@ -1,37 +1,40 @@
 class Solution {
     public int solution(int[] arr) {
         int answer = 0;
-
-        while (!isSameArray(arr, transformArray(arr))) {
-            arr = transformArray(arr);
+        while (!same(arr,arr2(arr)))
+        {
+            arr=arr2(arr);
             answer++;
         }
-
         return answer;
     }
-
-    private int[] transformArray(int[] arr) {
-        int[] transformedArr = new int[arr.length];
-
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] >= 50 && arr[i] % 2 == 0) {
-                transformedArr[i] = arr[i] / 2;
-            } else if (arr[i] < 50 && arr[i] % 2 != 0) {
-                transformedArr[i] = (arr[i] * 2) + 1;
-            } else {
-                transformedArr[i] = arr[i];
+    private int[] arr2(int[] arr)
+    {
+        int[] arr2 = new int[arr.length];
+        for(int i=0;i<arr.length;i++)
+        {
+            if(arr[i]>=50&&arr[i]%2==0)
+            {
+                arr2[i]=arr[i]/2;
+            } else if (arr[i]<50&&arr[i]%2!=0) {
+                arr2[i]=(arr[i]*2)+1;
             }
+            else 
+                arr2[i]=arr[i];
         }
-
-        return transformedArr;
+        return arr2;
     }
 
-    private boolean isSameArray(int[] arr1, int[] arr2) {
-        for (int i = 0; i < arr1.length; i++) {
-            if (arr1[i] != arr2[i]) {
+    private boolean same(int[] arr,int[] arr2)
+    {
+        for(int i=0;i<arr.length;i++)
+        {
+            if(arr[i]!=arr2[i])
+            {
                 return false;
             }
         }
         return true;
     }
+
 }
