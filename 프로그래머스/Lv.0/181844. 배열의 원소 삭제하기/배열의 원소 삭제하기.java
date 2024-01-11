@@ -4,9 +4,9 @@ class Solution {
     public ArrayList<Integer> solution(int[] arr, int[] delete_list) {
         ArrayList<Integer> answer= new ArrayList<>();
         ArrayList<Integer> delList= new ArrayList<>();
-        for(int i=0;i<delete_list.length;i++)
+        for(int i :delete_list)
         {
-            delList.add(delete_list[i]);
+            delList.add(i);
         }
         for(int i=0;i<arr.length;i++)
         {
