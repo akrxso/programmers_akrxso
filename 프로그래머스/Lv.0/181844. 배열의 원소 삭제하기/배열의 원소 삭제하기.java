@@ -8,14 +8,14 @@ class Solution {
         {
             delList.add(i);
         }
-        for(int i=0;i<arr.length;i++)
+        for(int i: arr)
         {
-            if(delList.contains(arr[i]))
+            if(delList.contains(i))
             {
                 continue;
             }
             else
-                answer.add(arr[i]);
+                answer.add(i);
         }
         return answer;
     }
